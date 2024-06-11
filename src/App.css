@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Jacquard+12&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jacquard+12&family=Spicy+Rice&display=swap");
+
+/* body {
+  font-family: "Poppins", sans-serif;
+  place-items: center;
+  background-color: black;
+} */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  background: url("./assets/images/bg.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  justify-content: center;
+  color: white;
+  align-items: center;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(3, 18, 65, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+}
+
+h1 {
+  font-family: "Spicy Rice", sans-serif;
+  background: linear-gradient(95deg, rgb(77, 255, 240), rgb(12, 125, 254));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-size: 5rem;
+}
+
+.game {
+  max-width: calc(3 * 100px);
+  padding: 40px;
+  border-radius: 4px;
+
+  color: aliceblue;
+  text-align: center;
+}
+
+.game:hover {
+  border: solid 1px wheat;
+}
+.status {
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.board {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+}
+.cell {
+  background: linear-gradient(145deg, rgb(254, 254, 200), rgb(250, 250, 150));
+  width: 100px;
+  height: 100px;
+  font-size: 36px;
+  border: 2px solid #752828;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
+  font-weight: 900;
+}
+.cell:hover {
+  background: linear-gradient(145deg, rgb(250, 250, 150), rgb(240, 240, 100));
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.cell.winner {
+  background-color: lightgreen;
+}
+.gradient-text {
+  background: linear-gradient(180deg, rgb(255, 234, 238), rgb(241, 92, 241));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bolder;
+  font-size: larger;
+}
+.reset {
+  padding: 5px 10px;
+  background-color: tomato;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  color: black;
+  font-size: large;
+  cursor: pointer;
+  border-radius: 8%;
+  font-weight: 300;
+}
+.reset:hover {
+  background-color: rgb(162, 21, 21);
+  color: white;
+}
+.footer {
+  background: linear-gradient(270deg, rgb(76, 255, 240), rgb(0, 120, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-style: italic;
+  font-weight: bold;
+}
+.redheart {
+  background: linear-gradient(270deg, rgb(221, 7, 78), rgb(230, 46, 123));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+@media screen and (max-width: 700px) {
+  h1 {
+    background: linear-gradient(90deg, rgb(76, 255, 240), rgb(0, 120, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 40px;
+  }
+  .wrapper {
+    padding: 10px;
+  }
+  .game {
+    max-width: calc(3 * 400px);
+    padding: 10px;
+  }
+  .cell {
+    width: 100px;
+    height: 100px;
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 300px) {
+  h1 {
+    font-size: 20px;
+  }
+  .wrapper {
+    padding: 5px;
+  }
+  .game {
+    max-width: calc(3 * 400px);
+    padding: 10px;
+  }
+  .board {
+    left: 10px;
+    place-items: center;
+  }
+  .cell {
+    width: 80px;
+    height: 80px;
+    font-size: 18px;
+  }
+  .status {
+    font-size: 15px;
+  }
+}
